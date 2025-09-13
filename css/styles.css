@@ -1066,6 +1066,7 @@ header::after {
     .contact .info .second-label,
     .contact .info .link {
         font-size: 20px;
+        line-height: 1.2;
     }
     .contact .info .social {
         justify-content: center;
