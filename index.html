@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,47 +28,70 @@
     <title>WAQAR - وقار للثوب العربي</title>
     <link rel="icon" type="image/jpg" href="images/favicon.jpg">
     <link rel="stylesheet" href="css/styles.css" >
+    <!-- FONTS -->
+    <link
+        rel="stylesheet"
+        href="https://use.typekit.net/jue8fco.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Asimovian&family=Noto+Kufi+Arabic:wght@100..900&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
     <!-- Render All Elements Normally -->
     <link rel="stylesheet" href="css/normalize.css" >
-    <!-- Font Awesome Library -->
+    <!-- Font Awesome Library For Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <a href="#" class="logo"><span class="animate logo-animate"></span>WAQAR<span class="animate" style="--i:1"></span></a>
+            <span class="animate" style="--i:4"></span>
+            <i onclick=showSideBar() class="fa-solid fa-bars" id="menuButton"></i>
+            <a href="#" class="logo"><span class="animate logo-animate"></span>وقــار<span class="animate" style="--i:1"></span></a>
             
-            <nav class="navbar">
-                <a href="#" class="active">Home</a>
-                <a href="#">About</a>
-                <a href="#">Pricing</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+            <!-- Hamburger Menu -->
+            <nav class="side-bar">
+                <i onclick=hideSideBar() class="fa-solid fa-xmark"></i>
+                <a href="#" class="active">الرئيسية</a>
+                <a href="#">الخدمات</a>
+                <a href="#">تشكيلة الموسم</a>
+                <a href="#">من نحن</a>
+                <a href="#">تواصل معنا</a>
+            </nav>
+            <nav id="hideOnMobile" class="navbar">
+                <a href="#home" class="active">الرئيسية</a>
+                <a href="#services">الخدمات</a>
+                <a href="#portfolio">تشكيلة الموسم</a>
+                <a href="#about">من نحن</a>
+                <a href="#contact">تواصل معنا</a>
                 <span class="animate" style="--i:2"></span>
             </nav>
             
-            <a href="#" class="btn sign-up">Sign Up <span class="animate" style="--i:3"></span></a>
+            <a href="#whatsappLink" class="btn sign-up">اطلب الآن<span class="animate" style="--i:3"></span></a>
         </div>
     </header>
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="container">
             <span class="animate bg"></span>
             
             <div class="home-content">
-                <h1>The Next Generation<span class="animate" style="--i:4"></span></h1>
-                <h1>Decentralized<span class="animate" style="--i:5"></span></h1>
-                <h1>Cryptocurrency وقار هو الإختيار<span class="animate" style="--i:6"></span></h1>
+                <h1>لأن ثوبـك يعكس شخصـيتـك<span class="animate" style="--i:4"></span></h1>
+                <h1>ولأنـك تستـحق الأفضـل<span class="animate" style="--i:5"></span></h1>
+                <h1>وقـار هو الإختيـار<span class="animate" style="--i:6"></span></h1>
             
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates suscipit ut repellat. Debitis aperiam ratione
-                    a
-                    iure maxime deleniti, reiciendis rem doloremque exercitationem doloribus nihil. Ipsa soluta repellendus
-                    recusandae
-                    quam.<span class="animate" style="--i:7"></span></p>
+                <p>
+                    يرتبط وقـار مباشرة بفكرة الأناقة والفخامة.
+                    <br>
+                    يخاطب العميل شخصيًا ويؤكد على جودة وتخصيص المنتج له.
+                    <br>
+                    يعطي إحساس بأن المنتج ليس مجرد ملابس، بل امتداد لشخصية العميل.
+                    <span class="animate" style="--i:7"></span></p>
             
                 <div class="btn-box">
-                    <a href="#" class="btn">Get Started</a>
-                    <a href="#" class="btn">Learn More</a>
+                    <a href="#portfolio" class="btn">اكتشف التشكيلة</a>
+                    <a href="#features" class="btn">المزيد عنا</a>
                     <span class="animate" style="--i:8"></span>
                 </div>
             </div>
@@ -79,37 +102,43 @@
         </div>
     </section>
     
-    <section class="features">
-        <h2 class="special-heading">FEATURES</h2>
+    <section class="features" id="features">
+        <h2 class="special-heading">المميزات</h2>
 
         <div class="container">
 
             <div class="feature-box">
                 <span class="animate" style="--i:1"></span>
                 <i class="fa-solid fa-shield-halved"></i>
-                <h2>Secure</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                <h2>جودة فاخرة</h2>
+                <p>نستخدم أفضل الأقمشة لضمان راحة وأناقة طوال اليوم.</p>
             </div>
 
             <div class="feature-box">
                 <i class="fa-solid fa-bolt"></i>
-                <h2>Fast</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                <h2>تطريز دقيق</h2>
+                <p>كل غرزة مصممة لتعكس جودة عالية وتدوم طويلًا.</p>
             </div>
 
             <div class="feature-box">
                 <i class="fa-solid fa-globe"></i>
-                <h2>Global</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                <h2>شحن سريع</h2>
+                <p>نوصّل طلبك لأي مكان في مصر خلال ٢-٣ أيام عمل.</p>
+            </div>
+
+            <div class="feature-box">
+                <i class="fa-solid fa-globe"></i>
+                <h2>خدمة عملاء</h2>
+                <p>دعم متاح دائمًا لمساعدتك في اختيار المقاس المناسب وتتبع طلبك.</p>
             </div>
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
 
-            <h2 class="special-heading">SERVICES</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <h2 class="special-heading">الخدمات</h2>
+            <p>نحن هنا دائمًا لمساعدتك في اختيار كل شيء وتتبع طلبك.</p>
         
             <div class="services-content">
 
@@ -119,8 +148,8 @@
                         <i class="fa-solid fa-chart-line"></i>
 
                         <div class="text">
-                            <h3>Service One</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                            <h3>احصائيات</h3>
+                            <p>لمتابعة نظام العمل وإعطائك أفضل خدمة ممكنة.</p>
                         </div>
                     </div>
 
@@ -129,8 +158,8 @@
                         <i class="fa-solid fa-lock"></i>
 
                         <div class="text">
-                            <h3>Service Two</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                            <h3>أمان تام</h3>
+                            <p>نوصّل طلبك لأي مكان في مصر في أمان تام كامل و شامل.</p>
                         </div>
                     </div>
                 </div>
@@ -141,8 +170,8 @@
                         <i class="fa-solid fa-cogs"></i>
 
                         <div class="text">
-                            <h3>Service Three</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                            <h3>نظام عمل قوي</h3>
+                            <p>جودة فاخرة لجميع الأقمشة وتطريز دقيق يمنحك الأناقة الفاخرة.</p>
                         </div>
                     </div>
 
@@ -151,8 +180,8 @@
                         <i class="fa-solid fa-headset"></i>
 
                         <div class="text">
-                            <h3>Service Four</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                            <h3>خدة عملاء</h3>
+                            <p>دعم متاح دائمًا لمساعدتك في اختيار المقاس المناسب وتتبع طلبك.</p>
                         </div>
                     </div>
                 </div>
@@ -164,11 +193,11 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
 
-            <h2 class="special-heading">PORTFOLIO</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <h2 class="special-heading">تشكيلة الموسم</h2>
+            <p>استكشف تشكيلتنا الحصرية لهذا الموسم، واختر الثوب الذي يعبر عنك.</p>
 
             <div class="portfolio-content">
 
@@ -176,7 +205,7 @@
                     <img src="images/1.png" alt="First Product" class="card-img">
 
                     <div class="info">
-                        <h3>First Product</h3>
+                        <h3>العباية الحمصي</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur, eius vitae,
                             amet?</p>
                     </div>
@@ -187,7 +216,7 @@
                     <img src="images/2.png" alt="Second Product" class="card-img">
                 
                     <div class="info">
-                        <h3>Second Product</h3>
+                        <h3>العباية المغربي</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur, eius vitae,
                             amet?</p>
                     </div>
@@ -197,7 +226,7 @@
                     <img src="images/3.png" alt="Third Product" class="card-img">
                 
                     <div class="info">
-                        <h3>Third Product</h3>
+                        <h3>العباية الخليجي</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur, eius vitae,
                             amet?</p>
                     </div>
@@ -207,11 +236,11 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
     
-            <h2 class="special-heading">ABOUT-US</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <h2 class="special-heading">من نحن</h2>
+            <p>"وقـار .. أصـل القصـة والحكـايـة"</p>
     
             <div class="about-content">
                 <div class="about-image">
@@ -219,13 +248,14 @@
                 </div>
                 <div class="about-text">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quae sint, facere natus corporis, optio necessitatibus
-                        ea et minus consectetur quo ipsa officiis numquam. Accusantium ipsum dolor quas quo nihil.
+                        في وقار، نؤمن أن الثوب أكثر من مجرد لباس، إنه انعكاس لهيبة الرجل وذوقه.
+                        <br>بدأنا رحلتنا لنقدم ثيابًا عربية تجمع بين التصميم
+                        العصري وجودة الخامات، مع لمسات تعكس التراث والوقار.
                     </p>
                     <hr>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quae sint, facere natus corporis, optio necessitatibus
-                        ea et minus consectetur quo ipsa officiis numquam. Accusantium ipsum dolor quas quo nihil.
+                        رسالتنا هي تقديم ثياب عربية بتصميم أنيق، ونسعى لأن نكون الوجهة الأولى للرجل العربي الذي يبحث عن الأصالة، عن طريق
+                        الإهتمام البالغ بالجودة والتفاصيل والتراث وأن نصمم منتجات تدوم طويلًا.
                     </p>
 
                 </div>
@@ -233,29 +263,57 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
 
-            <h2 class="special-heading">CONTACTS</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            <h2 class="special-heading">تواصل معنا</h2>
+            <p>اشترك معنا لتصلك أحدث العروض والتشكيلات أولًا بأول</p>
 
             <div class="info">
-                <p class="label">FEEL FREE TO MAIL US:</p>
-                <a href="mailto:XXXXX@example.com?subject=Contact" class="link">
-                    XXXXX@example.com
+                <p class="label">راسلنا الآن بالضغط على البريد الإلكتروني الآتي:</p>
+                <a href="mailto:mail@example.com?subject=Contact" class="link">
+                    waqar@example.com
                 </a>
 
-                <p class="label">Find us on socila media</p>
+                <p class="second-label">و تابعنا الآن على جميع المنصات ليصلك كل جديد!</p>
+
                 <div class="social">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-tiktok"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-telegram"></i>
-                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.telegram.com/" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="https://www.whatsapp.com/" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <span>وقـار</span> كل الحقوق محفوظـة 2025 &copy;
+    </footer>
+
+    <script>
+        function showSideBar() {
+            const sidebar = document.querySelector('.side-bar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSideBar() {
+            const sidebar = document.querySelector('.side-bar')
+            sidebar.style.display = 'none'
+        }
+    </script>
 </body>
 </html>
